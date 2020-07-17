@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/css/basic.css" />
+  </head>
+  <body>
+    <h2>新闻页--{{msg}}, 姓名--{{userInfo.name}}, 年龄--{{userInfo.age}}</h2>
+    <ul>
+      {% for item in list %}
+      <li>
+        <a href="/newscontent?aid={{item.aid}}"
+          >{{item.title}}<span>---{{helper.formatTime(item.dateline)}}</span></a
+        >
+      </li>
+      {% endfor %}
+    </ul>
+    <img src="/public/images/1.jpg" alt="" />
+  </body>
+</html>

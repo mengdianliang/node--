@@ -1,0 +1,7 @@
+{
+  "extends": "eslint-config-egg",
+  "rules": {
+    "semi": 0,
+    "comma-dangle": [2, "never"]
+  }
+}
