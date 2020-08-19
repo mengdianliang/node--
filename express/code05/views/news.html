@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>ejs模板引擎--新闻页面</h2>
+  <p>名称：<%=userInfo.username%>--年龄：<%=userInfo.age%></p>
+  <p><%-article%></p>
+  <%if(flag===true){%>
+    <strong>flag=true</strong>
+    <%}%>
+  <ul>
+    <%for(let i=0;i<list.length;i++) {%>
+    <li><%=list[i]%></li>
+    <%}%>
+  </ul>
+  <%-include('footer.html', {})%>
+</body>
+</html>

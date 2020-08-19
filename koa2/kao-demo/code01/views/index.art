@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel='stylesheet' href="css/base.css" />
+</head>
+<body>
+  <h2 class="title">呵呵{{title}}</h2>
+  {{if num > 20}} <strong>大于20</strong> {{else if num < 20}} <strong>小于20</strong>{{/if}}
+  <ul>
+    {{each list value index}}
+    <li>{{index}} ---- {{value}}</li>
+    {{/each}}
+  </ul>
+  <form action="/doAdd" method="post">
+    姓名：<input name="user" /><br/>
+    密码：<input name="password" type="password" /><br/>
+    <button type="submit">提交</button>
+  </form>
+  {{include 'public/footer.art'}}
+</body>
+</html>
